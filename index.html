@@ -1,0 +1,201 @@
+.<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koinot Sayti</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* STARS */
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(#88ccff 1px,transparent 1px);
+background-size:120px 120px,180px 180px;
+animation:moveStars 60s linear infinite;
+z-index:-5;
+}
+
+@keyframes moveStars{
+from{transform:translateY(0);}
+to{transform:translateY(-1000px);}
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#00d9ff;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin:0 10px;
+}
+
+nav a:hover{
+color:#00d9ff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+text-shadow:0 0 20px cyan;
+}
+
+.hero p{
+max-width:600px;
+margin-top:20px;
+color:#ccc;
+line-height:1.6;
+}
+
+.btn{
+margin-top:25px;
+padding:12px 30px;
+background:#00d9ff;
+color:#000;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* PLANET CARD */
+main{
+padding:50px 20px;
+}
+
+.card{
+max-width:900px;
+margin:80px auto;
+display:flex;
+gap:40px;
+align-items:center;
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.planet{
+width:180px;
+height:180px;
+border-radius:50%;
+animation:spin 15s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0);}
+to{transform:rotate(360deg);}
+}
+
+.earth{
+background:radial-gradient(circle,#4fc3f7,#1565c0);
+}
+
+.mars{
+background:radial-gradient(circle,#ff8a65,#d84315);
+}
+
+.info h2{
+color:#00d9ff;
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#050505;
+margin-top:50px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<!-- NAV -->
+<nav>
+<h2>Koinot</h2>
+<div>
+<a href="#">Bosh sahifa</a>
+<a href="#">Planetalar</a>
+<a href="#">Aloqa</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+<h1>Koinotga Xush Kelibsiz</h1>
+<p>Bu sayt orqali Yer, Mars va boshqa planetalar haqida bilib olasiz.</p>
+<a class="btn" href="#planets">Boshlash</a>
+</header>
+
+<!-- PLANETS -->
+<main id="planets">
+
+<div class="card">
+<div class="planet earth"></div>
+<div class="info">
+<h2>Yer</h2>
+<p>Yer — biz yashaydigan sayyora, suv va hayot mavjud.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="planet mars"></div>
+<div class="info">
+<h2>Mars</h2>
+<p>Mars — qizil sayyora, sovuq va changli muhitga ega.</p>
+</div>
+</div>
+
+</main>
+
+<footer>
+<h3>Abdulloh.X | Koinot Sayti</h3>
+</footer>
+
+</body>
+</html>
